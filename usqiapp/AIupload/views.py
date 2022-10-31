@@ -65,13 +65,14 @@ def dashboard(request):
 
         if request.method == 'POST':
              
- 
-            account_sid = 'AC23d9576137d834075d89062381538dd0' 
-            auth_token = 'bcbeeb815c1f63606a99d6efbf1d484d' 
+            
+            
+            account_sid = '' 
+            auth_token = '' 
             client = Client(account_sid, auth_token) 
  
             ##Send to school or dak as well
-            message = client.messages.create(messaging_service_sid='MG9f1122dfcbce21d53bbaee318d75ebbd', body='EMERGENCY ' + str(request.user.first_name) + ' HAS REQUESTED HELP FOR A MENTAL HEALTH CRISIS AT BU CALL THEM AT +1' + str(request.user.phone) + ' OR REACH OUT TO EMERGENCY SERVICES ASAP', to='+16308081663')
+            message = client.messages.create(messaging_service_sid='', body='EMERGENCY ' + str(request.user.first_name) + ' HAS REQUESTED HELP FOR A MENTAL HEALTH CRISIS AT BU CALL THEM AT +1' + str(request.user.phone) + ' OR REACH OUT TO EMERGENCY SERVICES ASAP', to='+16308081663')
 
             return redirect('call')
  
