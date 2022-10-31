@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/SpOKxoH.png"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %} Red Light BU
+                {% endblock %}</title>
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+   
+    <meta property="article:modified_time" content="2021-03-31T01:32:06+00:00">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6F70L64FF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M6F70L64FF');
+    </script>
+
+    <style>
+      header {
+        font-family: 'Nunito', sans-serif;
+      }
+
+      section {
+        font-family: 'Nunito', sans-serif;
+      }
+
+      h2 {
+        font-family: 'Nunito', sans-serif;
+      }
+
+      h1 {
+        font-family: 'Nunito', sans-serif;
+      }
+
+      body {
+        font-family: 'Nunito', sans-serif;
+      }
+
+      p {
+        font-family: 'Nunito', sans-serif;
+      }
+
+      a {
+        font-family: 'Nunito', sans-serif;
+      }
+    </style>
+    <style> 
+#myVideo {
+    position:absolute;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+#shadow {
+    z-index: -1;
+}
+#shadow1 {
+    z-index: 0;
+}
+
+#shadow2 {
+    z-index: 1;
+}
+
+
+</style>
+
+    
+
+</head>
+
+        <body> 
+            <div id = "content", name = "content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </body>
+
+
+
+
+</html>

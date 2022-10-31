@@ -1,0 +1,19 @@
+{'id' : {
+
+            'iscustomer' : True/False,
+            'email',
+            'name',
+            ...
+
+            'vertests' : {
+
+                'id' : {'vert':, show}
+                'id2' : {'vert':, show}
+                'id3' : {'vert':, show}
+                ...
+
+            }
+        }
+}
+
+

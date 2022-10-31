@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+{% block content %}
+<script>function handleCopyTextFromParagraph() {
+    const cb = navigator.clipboard;
+    const paragraph = document.querySelector('#share');
+    cb.writeText(paragraph.innerText).then(() => alert('Link Copied! Send it to another student!'));
+  }</script>
+
+{% if user.is_authenticated %}
+
+<div class="flex h-screen">
+    <div class="m-auto">
+
+<p class="text-gray-700 text-center mt-5 px-5 font-extrabold">Come back to this page (redlight.link) during a mental health crisis.</p>
+
+<form class="mx-5" method="POST">
+    {% csrf_token %}
+    <button onclick="test()" type="submit" class="flex items-center justify-center mx-auto h-24 w-full px-20 sm:w-64 bg-red-500 mt-8 rounded-2xl shadow-lg font-semibold text-2xl text-white hover:bg-blue-700 hover:animate-pulse">HELP ME!</button>
+</form>
+
+<p class="text-gray-700 text-center mt-5 px-5">By clicking the button above your emergency contact will be notified of your situation and you will be prompted to call the Suicide Hotline.</p>
+</div>
+</div>
+
+{% else %}
+
+<section class=" 2xl:pb-20 px-5">
+        
+        
+    <div class="relative rounded-b-3xl my-10 bg-gray-100 rounded-t-3xl">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center -mx-4 pt-10 pb-10">
+            <div class="w-full lg:w-1/2 px-4 lg:mb-0">
+              <h1 class="max-w-xl mb-10 font-heading font-medium text-5xl font-extrabold md:text-10xl xl:text-12xl leading-none">
+                <span class="block w-full text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 lg:inline">Red Light BU</span>
+
+                </span>
+              </h1>
+
+              <h1 class="text-center font-extrabold text-3xl">How it works:</h1>
+              <h1 class=" pt-5 ml-5 text-xl">1. Create an account.</h1>
+              <h1 class=" pt-5 ml-5 text-xl">2. Go to redlight.link if you're having a mental crisis.</h1>
+              <h1 class=" pt-5 ml-5 text-xl">3. Click "Help Me", your emergency contact will be notified via SMS text and you'll be prompted to call a help hotline.</h1>
+              
+              <form id="profile-form" action="/dashboard">
+
+              <div class="w-full md:w-auto px-10  mb-4">
+                
+              </div>
+              <div class="w-full md:w-auto px-4 mb-4">
+                <a href="{% url 'register' %}" class="loading flex items-center justify-center mx-auto bg-gradient-to-r from-red-500 to-pink-500 py-5 px-5 border-2 border-gray-50 hover:border-gray-100 rounded-xl" href="#">
+                  <p id="loading1" class="font-extrabold uppercase text-white">Create Account</p>
+                  <svg id="analyze" xmlns="http://www.w3.org/2000/svg" class="hidden animate-bounce h-6 w-6 text-white font-extrabold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+</svg>
+
+</a>
+<div class="text-center pt-5">
+    <button type="button" onclick="handleCopyTextFromParagraph()" class="text-red-500 hover:bg-gray-100 border-2 border-red-500 focus:ring-4 focus:ring-gray-100 font-extrabold rounded-full text-xs px-5 py-1 text-center inline-flex items-center">
+
+    <p type="text" class="hidden" id="share">https://redlight.link</p>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="pr-1 mr-2 -ml-3 w-6 h-5 border-r border-red-500 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+Share Red Light to Another Student
+</button>
+
+              </div>
+              
+
+            
+            </div>
+        </div>
+      </div>
+    </section>
+
+<p class="text-center text-gray-300 mt-5">Developed by Richard Buehling for USQI</p>
+
+    {% endif %}
+
+{% endblock %}

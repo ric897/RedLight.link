@@ -1,0 +1,7 @@
+Django==3.2.7
+numpy==1.20.3
+pandas==1.3.5
+Pillow==9.0.0
+proto==0.0.1
+proto_plus==1.19.8
+protobuf==3.19.3
