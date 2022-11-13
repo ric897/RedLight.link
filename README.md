@@ -21,9 +21,11 @@ To install this on your computer you will need to follow a few steps:
 
 First, make sure to have git, pip, and python install on your comuter. Next run the commands:
 
-`pip install twilio'
-'pip install crispy-tailwind'
-`pip install django`
+```
+pip install twilio
+pip install crispy-tailwind
+pip install django
+```
 
 Finally. after you clone the rep, cd into usqiapp and run the command:
 
