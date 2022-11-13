@@ -19,7 +19,7 @@ Most of the functionality is handled in the views.py file (under AIUpload/views.
 
 To install this on your computer you will need to follow a few steps:
 
-First, make sure to have git, pip, and python install on your comuter. Next run the commands:
+First, make sure to have git, pip, and python install on your computer. Next run the commands:
 
 ```
 pip install twilio
