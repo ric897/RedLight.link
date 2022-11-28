@@ -83,16 +83,7 @@ DATABASES = {
     }
 }
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'postgappdb',
-#        'USER': 'richardbuehling',
-#        'PASSWORD' : 'ICboy2002!',
-#        'HOST': 'localhost',
-#        'PORT': '',
-#    }
-#}
+
 
 
 # Password validation
@@ -157,8 +148,8 @@ AUTH_USER_MODEL = 'AIupload.newuser'
 
 
 
-ADMINS = [('Richard', 'richard@bouncefactory.co')]
-SERVER_EMAIL = 'welcometobounceai@gmail.com'
+ADMINS = [('', '')]
+SERVER_EMAIL = ''
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -166,7 +157,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'welcometobounceai@gmail.com'
-EMAIL_HOST_PASSWORD = 'ICboy2002!'
+EMAIL_HOST_PASSWORD = ''
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
